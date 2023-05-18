@@ -6,15 +6,17 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/marcel-dempers/docker-development-youtube-series.git
+    repoURL: https://github.com/nelocampo05/CICD-HelloWorld/blob/main/argo-cd/app.yaml
     targetRevision: HEAD
-    path: argo/example-app
+    path: dev
     directory:
       recurse: true
   destination:
     server: https://kubernetes.default.svc
-    namespace: example-app
+    namespace: myapp
   syncPolicy:
+    syncOptions: 
+    - CreateNamespace=true
     automated:
-      prune: false
-      selfHeal: false
+      prune: true
+      selfHeal: true
