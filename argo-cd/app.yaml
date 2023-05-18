@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/nelocampo05/CICD-HelloWorld/blob/main/argo-cd/app.yaml
+    repoURL: https://github.com/nelocampo05/CICD-HelloWorld.git
     targetRevision: HEAD
     path: dev
     directory:
@@ -15,8 +15,8 @@ spec:
     server: https://kubernetes.default.svc
     namespace: myapp
   syncPolicy:
-    syncOptions: 
+    syncOptions:
     - CreateNamespace=true
     automated:
-      prune: true
       selfHeal: true
+      prune: true
