@@ -16,5 +16,5 @@ spec:
       - name: myapp
         image: nocampodev/nelimages:v2.0
         ports:
-        - containerPort: 8080
+        - containerPort: 4200
 
