@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: service-a
 spec:
- ingressClassName: nginx
+  ingressClassName: nginx
   rules:
   - host: public.service-a.com
     http:
@@ -11,7 +11,7 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          service:
-            name: myapp-service
-            port:
-              number: 8080
+         service:
+          name: myapp-service
+          port:
+           number: 8080
