@@ -3,9 +3,8 @@ kind: Service
 metadata:
   name: myapp-service
 spec:
-  type: ClusterIP
   selector:
-    app.kubernetes.io/name: myapp
+    name: myapp
   ports:
   - port: 8080
     protocol: TCP
